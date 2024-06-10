@@ -14,9 +14,13 @@ public class ChestScript : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        InventarioScript playerInventory = FindObjectOfType<InventarioScript>();
         if (!isOpen)
         {
-            OpenChest();
+            if (playerInventory.hasKey)
+            {
+                OpenChest();
+            }
         }
     }
 
