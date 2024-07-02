@@ -7,6 +7,8 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public GameObject skullPrefab;
     public GameObject omeriPrefab;
 
+    public GameObject tpPuzzle;
+
     public Animator portaAnimator;
 
     private bool isSkullPlaced = false;
@@ -50,6 +52,7 @@ public class TavoloScript : MonoBehaviour, IInteractable
         playerInventory.RemoveOmero();
         isOmeroPlaced = true;
         Debug.Log("Omeri posizionati sul tavolo.");
+        tpPuzzle.SetActive(true);
 
     }
 }
