@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class TavoloScript : MonoBehaviour, IInteractable
 {
-    public GameObject skullPrefab; // Prefab del teschio da posizionare sul tavolo
+    public GameObject skullPrefab;
+    public GameObject omeriPrefab;
+
     public Animator portaAnimator;
+
     private bool isSkullPlaced = false;
+    private bool isOmeroPlaced = false;
+
 
     public void Interact()
     {
@@ -16,6 +21,10 @@ public class TavoloScript : MonoBehaviour, IInteractable
             if (playerInventory.hasSkull && !isSkullPlaced)
             {
                 PlaceSkull(playerInventory);
+            }
+            else if (playerInventory.hasOmero && !isOmeroPlaced)
+            {
+                PlaceOmero(playerInventory);
             }
         
         }
@@ -32,5 +41,15 @@ public class TavoloScript : MonoBehaviour, IInteractable
         // Attiva l'animazione della porta
         portaAnimator.SetTrigger("Open");
         Debug.Log("Animazione della porta attivata");
+    }
+
+    private void PlaceOmero(InventarioScript playerInventory)
+    {
+        // Posiziona gli omeri sul tavolo
+        omeriPrefab.SetActive(true);
+        playerInventory.RemoveOmero();
+        isOmeroPlaced = true;
+        Debug.Log("Omeri posizionati sul tavolo.");
+
     }
 }

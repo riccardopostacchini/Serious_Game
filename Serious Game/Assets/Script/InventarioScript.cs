@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventarioScript : MonoBehaviour
 {
     public bool hasSkull = false;
+    public bool hasOmero = false;
     public bool hasKey = false;
 
     public void AddKey()
@@ -28,5 +29,17 @@ public class InventarioScript : MonoBehaviour
     {
         hasSkull = false;
         Debug.Log("Teschio rimosso dall'inventario!");
+    }
+
+    public void AddOmero()
+    {
+        hasOmero = true;
+        Debug.Log("Omeri raccolto!");
+    }
+
+    public void RemoveOmero()
+    {
+        hasOmero = false;
+        Debug.Log("Omeri rimossi dall'inventario!");
     }
 }
