@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class InventarioScript : MonoBehaviour
 {
+    public AudioClip suonoCranio;
+    public AudioClip suonoChiave;
+    private AudioSource audioSource;
+
     public bool hasSkull = false;
     public bool hasOmero = false;
     public bool hasKey = false;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void AddKey()
     {
         hasKey = true;
+        audioSource.PlayOneShot(suonoChiave);
         Debug.Log("Chiave raccolta");
     }
 
@@ -22,6 +31,7 @@ public class InventarioScript : MonoBehaviour
     public void AddSkull()
     {
         hasSkull = true;
+        audioSource.PlayOneShot(suonoCranio);
         Debug.Log("Teschio raccolto!");
     }
 

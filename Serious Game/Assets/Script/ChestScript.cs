@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class ChestScript : MonoBehaviour, IInteractable
 {
+    public AudioClip openSound; 
+    private AudioSource audioSource;
     private Animator animator;
     private bool isOpen = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Interact()
@@ -20,6 +23,7 @@ public class ChestScript : MonoBehaviour, IInteractable
             if (playerInventory.hasKey)
             {
                 OpenChest();
+                audioSource.PlayOneShot(openSound);
             }
         }
     }
