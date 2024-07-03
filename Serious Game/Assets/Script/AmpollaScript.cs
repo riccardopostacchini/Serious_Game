@@ -14,7 +14,7 @@ public class AmpollaScript : MonoBehaviour, IInteractable
     public AudioClip cassa;
     private AudioSource audioSource;
 
-    private int combinazioniCorretteAttivate = 0;
+    private List<string> combinazioniAttivate = new List<string>();
 
     public Animator animator;
 
@@ -80,6 +80,11 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         string color2 = collectedProvette[1].color;
         string combinationKey = color1 + "_" + color2;
 
+        if (combinazioniAttivate.Contains(combinationKey))
+        {
+            Debug.Log($"Combinazione {combinationKey} già attivata. Impossibile ripeterla.");
+            return;
+        }
         // Dictionary with valid combinations
         Dictionary<string, GameObject> colorCombinations = new Dictionary<string, GameObject>
         {
@@ -100,9 +105,9 @@ public class AmpollaScript : MonoBehaviour, IInteractable
             DestroyAmpollaVuota();
             Debug.Log($"Combinazione corretta: {combinationKey}. Ampolla {resultAmpolla.name} attivata.");
 
-            combinazioniCorretteAttivate++;
+            combinazioniAttivate.Add(combinationKey);
 
-            
+
         }
         else
         {
