@@ -8,22 +8,33 @@ public class AmpollaScript : MonoBehaviour, IInteractable
     public GameObject ampollaViola;
     public GameObject ampollaVerde;
     public GameObject ampollaVuota;
-    
+    public GameObject ampollaVuota2;
+    public GameObject ampollaVuota3;
+
+    public AudioClip cassa;
+    private AudioSource audioSource;
+
+    private int combinazioniCorretteAttivate = 0;
+
+    public Animator animator;
+
     public float distanceFromPlayer = 0.75f; // Distanza dal giocatore
 
-    public bool isCollected = false;
+    private bool isCollected = false;
     private Transform playerCameraTransform; // Riferimento alla trasformazione della telecamera del giocatore
     private List<ProvettaScript> collectedProvette = new List<ProvettaScript>();
 
     private void Start()
     {
         playerCameraTransform = Camera.main.transform;
+        audioSource = GetComponent<AudioSource>();
     }
 
-    public void Update()
+        public void Update()
     {
-         
+        Debug.Log("Stato di isCollected: " + isCollected);
     }
+
     public void Interact()
     {
         if (!isCollected)
@@ -34,11 +45,9 @@ public class AmpollaScript : MonoBehaviour, IInteractable
 
     private void CollectAmpolla()
     {
-        
         isCollected = true;
-        
         StartCoroutine(FollowPlayer());
-        Debug.Log("Ampolla raccolta");
+        Debug.Log("Ampolla raccolta. Stato di isCollected: " + isCollected);
         GetComponent<Collider>().enabled = false;
     }
 
@@ -50,6 +59,7 @@ public class AmpollaScript : MonoBehaviour, IInteractable
             transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 10);
             transform.rotation = Quaternion.LookRotation(playerCameraTransform.forward, Vector3.up);
             yield return null;
+            
         }
     }
 
@@ -89,6 +99,10 @@ public class AmpollaScript : MonoBehaviour, IInteractable
             Destroy(collectedProvette[1].gameObject);
             DestroyAmpollaVuota();
             Debug.Log($"Combinazione corretta: {combinationKey}. Ampolla {resultAmpolla.name} attivata.");
+
+            combinazioniCorretteAttivate++;
+
+            
         }
         else
         {
@@ -106,25 +120,51 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         if (ampollaVuota != null)
         {
             Destroy(ampollaVuota);
+            if (ampollaVuota2 != null)
+            {
+                ampollaVuota2.SetActive(true);
+            }
+            else
+            {
+                Debug.LogError("ampollaVuota2 non è stato assegnato.");
+            }
         }
-        
-
-        isCollected = false; // Imposta a false dopo aver distrutto l'ampolla vuota
-    }
-
-    public bool IsCollected()
-    {
-        if (isCollected)
+        else if (ampollaVuota2 != null)
         {
-            isCollected = false; // Inverti il valore solo se isCollected è true
-            return false; // Restituisci false dopo l'inversione
+            Destroy(ampollaVuota2);
+            if (ampollaVuota3 != null)
+            {
+                ampollaVuota3.SetActive(true);
+            }
+            else
+            {
+                Debug.LogError("ampollaVuota3 non è stato assegnato.");
+            }
         }
         else
         {
-            return isCollected; // Restituisci il valore corrente di isCollected
+            audioSource.PlayOneShot(cassa);
+            AvviaAnimazione();
+            
+            Debug.Log("Animazione attivata");
+            Destroy(ampollaVuota3);
+            Debug.LogError("Nessuna ampolla vuota disponibile.");
         }
 
-
+        // Imposta isCollected a false dopo aver distrutto l'ampolla vuota
+        isCollected = false;
     }
 
+    private void AvviaAnimazione()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("Open"); // Imposta il trigger per avviare l'animazione
+        }
+        
+    }
+    public bool IsCollected()
+    {
+        return isCollected;
+    }
 }

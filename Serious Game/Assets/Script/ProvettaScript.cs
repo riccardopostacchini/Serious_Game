@@ -17,7 +17,7 @@ public class ProvettaScript : MonoBehaviour, IInteractable
     public void Interact()
     {
         AmpollaScript ampolla = FindObjectOfType<AmpollaScript>();
-        if (ampolla != null && !ampolla.IsCollected())
+        if (ampolla != null && ampolla.IsCollected())
         {
             ampolla.AddProvetta(this);
             Debug.Log($"Provetta {color} aggiunta all'ampolla");
