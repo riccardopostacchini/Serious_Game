@@ -25,6 +25,10 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     public Transform orientation;
 
+    public AudioClip camminata;
+    public AudioClip salto;
+    private AudioSource audioSource;
+
     float horizontalInput;
     float verticalInput;
 
@@ -38,6 +42,8 @@ public class PlayerMovementTutorial : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -83,11 +89,33 @@ public class PlayerMovementTutorial : MonoBehaviour
 
         // on ground
         if (grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+
+            // Play walking sound if player is moving
+            if (moveDirection.magnitude > 0 && !audioSource.isPlaying)
+            {
+                audioSource.clip = camminata;       
+                audioSource.loop = true;
+                audioSource.Play();
+            }
+            else if (moveDirection.magnitude == 0 && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
 
         // in air
         else if (!grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+
+            // Stop walking sound when in air
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
     }
 
     private void SpeedControl()
@@ -108,6 +136,10 @@ public class PlayerMovementTutorial : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+        audioSource.PlayOneShot(salto);
+
+        
     }
     private void ResetJump()
     {

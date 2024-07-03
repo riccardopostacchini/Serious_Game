@@ -7,8 +7,16 @@ public class TabelloneScript : MonoBehaviour, IInteractable
     public List<GameObject> puzzleSlots; // Lista degli slot dei pezzi di puzzle sul tabellone
     public Animator Animator;
 
+    public AudioClip openSound;
+    private AudioSource audioSource;
+
     private int placedPiecesCount = 0; // Contatore dei pezzi di puzzle posizionati
     private const int totalPieces = 15; // Numero totale di pezzi di puzzle
+
+     void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void Interact()
     {
         Debug.Log("Interagito con il tabellone.");
@@ -55,6 +63,7 @@ public class TabelloneScript : MonoBehaviour, IInteractable
         {
             Debug.Log("Tutti i pezzi di puzzle sono stati posizionati. Avvia l'animazione finale.");
             Animator.SetTrigger("Open");
+            audioSource.PlayOneShot(openSound);
         }
     }
 }
