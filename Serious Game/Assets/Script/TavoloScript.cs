@@ -7,6 +7,9 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public GameObject skullPrefab;
     public GameObject omeriPrefab;
 
+    public AudioClip porta;
+    private AudioSource audioSource;
+
     public GameObject tpPuzzle;
 
     public Animator portaAnimator;
@@ -14,7 +17,10 @@ public class TavoloScript : MonoBehaviour, IInteractable
     private bool isSkullPlaced = false;
     private bool isOmeroPlaced = false;
 
-
+    public void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void Interact()
     {
         InventarioScript playerInventory = FindObjectOfType<InventarioScript>();
@@ -43,6 +49,7 @@ public class TavoloScript : MonoBehaviour, IInteractable
         // Attiva l'animazione della porta
         portaAnimator.SetTrigger("Open");
         Debug.Log("Animazione della porta attivata");
+        audioSource.PlayOneShot(porta);
     }
 
     private void PlaceOmero(InventarioScript playerInventory)
