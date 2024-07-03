@@ -63,7 +63,8 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (!PausaScript.inPausa)
+            MovePlayer();
     }
 
     private void MyInput()
@@ -71,14 +72,17 @@ public class PlayerMovementTutorial : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        // when to jump
-        if (Input.GetKey(KeyCode.Space) && readyToJump && grounded)
+        if (!PausaScript.inPausa)
         {
-            readyToJump = false;
+            // when to jump
+            if (Input.GetKey(KeyCode.Space) && readyToJump && grounded)
+            {
+                readyToJump = false;
 
-            Jump();
+                Jump();
 
-            Invoke(nameof(ResetJump), jumpCooldown);
+                Invoke(nameof(ResetJump), jumpCooldown);
+            }
         }
     }
 
@@ -86,7 +90,7 @@ public class PlayerMovementTutorial : MonoBehaviour
     {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
+      
         // on ground
         if (grounded)
         {

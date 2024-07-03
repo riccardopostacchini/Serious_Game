@@ -12,14 +12,17 @@ public class InterazioneScript : MonoBehaviour
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (!PausaScript.inPausa)
             {
-                Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
-                if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
+                    if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
                     {
-                        interactObj.Interact();
+                        if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                        {
+                            interactObj.Interact();
+                        }
                     }
                 }
             }
