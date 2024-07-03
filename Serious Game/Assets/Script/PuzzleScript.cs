@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PuzzleScript : MonoBehaviour, IInteractable
 {
-    public float distanceFromPlayer = 0.75f; // Distanza dal giocatore
+    public float distanceFromPlayer = 2.0f; // Distanza dal giocatore
     private bool isCollected = false;
     private Transform playerCameraTransform; // Riferimento alla trasformazione della telecamera del giocatore
 
