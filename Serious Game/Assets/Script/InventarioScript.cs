@@ -12,6 +12,7 @@ public class InventarioScript : MonoBehaviour
     public bool hasOmero = false;
     public bool hasColonna = false;
     public bool hasTorace = false;
+    public bool hasAvambraccio = false;
     public bool hasKey = false;
 
     private void Start()
@@ -77,5 +78,17 @@ public class InventarioScript : MonoBehaviour
     {
         hasTorace = false;
         Debug.Log("torace rimosso dall'inventario!");
+    }
+
+    public void AddAvambraccio()
+    {
+        hasAvambraccio = true;
+        
+    }
+
+    public void RemoveAvambraccio()
+    {
+        hasAvambraccio = false;
+        
     }
 }

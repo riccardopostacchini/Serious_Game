@@ -8,6 +8,7 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public GameObject omeriPrefab;
     public GameObject colonnaPrefab;
     public GameObject toracePrefab;
+    public GameObject avambraccioPrefab;
 
     public AudioClip porta;
     private AudioSource audioSource;
@@ -22,6 +23,7 @@ public class TavoloScript : MonoBehaviour, IInteractable
     private bool isOmeroPlaced = false;
     private bool isColonnaPlaced = false;
     private bool isToracePlaced = false;
+    private bool isAvambraccioPlaced = false;
 
     public void Start()
     {
@@ -43,6 +45,14 @@ public class TavoloScript : MonoBehaviour, IInteractable
             else if (!playerInventory.hasColonna && !isColonnaPlaced)
             {
                 PlaceColonna(playerInventory);
+            }
+            else if (!playerInventory.hasTorace && !isToracePlaced)
+            {
+                PlaceTorace(playerInventory);
+            }
+            else if (!playerInventory.hasAvambraccio && !isAvambraccioPlaced)
+            {
+                PlaceAvambraccio(playerInventory);
             }
         
         }
@@ -91,7 +101,17 @@ public class TavoloScript : MonoBehaviour, IInteractable
         playerInventory.RemoveTorace();
         isToracePlaced = true;
         Debug.Log("Torace posizionati sul tavolo.");
-        
+        tpParkour.SetActive(true);
 
+
+    }
+
+    private void PlaceAvambraccio(InventarioScript playerInventory)
+    {
+       
+       avambraccioPrefab.SetActive(true);
+        playerInventory.RemoveAvambraccio();
+        isAvambraccioPlaced = true;
+  
     }
 }
