@@ -7,7 +7,9 @@ public class TabelloneScript : MonoBehaviour, IInteractable
     public List<GameObject> puzzleSlots; // Lista degli slot dei pezzi di puzzle sul tabellone
     public Animator Animator;
 
+    public AudioClip placeSound;
     public AudioClip openSound;
+    public AudioClip victorySound;
     private AudioSource audioSource;
 
     private int placedPiecesCount = 0; // Contatore dei pezzi di puzzle posizionati
@@ -27,6 +29,8 @@ public class TabelloneScript : MonoBehaviour, IInteractable
             if (collectedPuzzlePiece != null && collectedPuzzlePiece.IsCollected())
             {
                 PlacePuzzlePiece(collectedPuzzlePiece);
+                audioSource.PlayOneShot(placeSound);
+
                 Debug.Log("Piazzato.");
             }
             else
@@ -62,6 +66,7 @@ public class TabelloneScript : MonoBehaviour, IInteractable
         if (placedPiecesCount >= totalPieces)
         {
             Debug.Log("Tutti i pezzi di puzzle sono stati posizionati. Avvia l'animazione finale.");
+            audioSource.PlayOneShot(victorySound);
             Animator.SetTrigger("Open");
             audioSource.PlayOneShot(openSound);
         }

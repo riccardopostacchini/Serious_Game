@@ -7340,7 +7340,9 @@ MonoBehaviour:
   - {fileID: 95948312}
   - {fileID: 70048192}
   Animator: {fileID: 1284072305}
+  placeSound: {fileID: 8300000, guid: 2192102f17bfa954084ad50905b3261f, type: 3}
   openSound: {fileID: 8300000, guid: 35f11c2cc74d4af47b1461649cc8f927, type: 3}
+  victorySound: {fileID: 8300000, guid: a218005a81d828443baaf990e8d20b50, type: 3}
 --- !u!65 &772126010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7373,7 +7375,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
