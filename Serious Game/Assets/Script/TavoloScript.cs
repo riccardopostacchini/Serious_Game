@@ -6,16 +6,22 @@ public class TavoloScript : MonoBehaviour, IInteractable
 {
     public GameObject skullPrefab;
     public GameObject omeriPrefab;
+    public GameObject colonnaPrefab;
+    public GameObject toracePrefab;
 
     public AudioClip porta;
     private AudioSource audioSource;
 
     public GameObject tpPuzzle;
+    public GameObject tpColori;
+    public GameObject tpParkour;
 
     public Animator portaAnimator;
 
     private bool isSkullPlaced = false;
     private bool isOmeroPlaced = false;
+    private bool isColonnaPlaced = false;
+    private bool isToracePlaced = false;
 
     public void Start()
     {
@@ -33,6 +39,10 @@ public class TavoloScript : MonoBehaviour, IInteractable
             else if (playerInventory.hasOmero && !isOmeroPlaced)
             {
                 PlaceOmero(playerInventory);
+            }
+            else if (!playerInventory.hasColonna && !isColonnaPlaced)
+            {
+                PlaceColonna(playerInventory);
             }
         
         }
@@ -60,6 +70,28 @@ public class TavoloScript : MonoBehaviour, IInteractable
         isOmeroPlaced = true;
         Debug.Log("Omeri posizionati sul tavolo.");
         tpPuzzle.SetActive(true);
+
+    }
+
+    private void PlaceColonna(InventarioScript playerInventory)
+    {
+        // Posiziona la colonna sul tavolo
+        colonnaPrefab.SetActive(true);
+        playerInventory.RemoveColonna();
+        isColonnaPlaced = true;
+        Debug.Log("Colonna posizionata sul tavolo.");
+        tpColori.SetActive(true);
+
+    }
+
+    private void PlaceTorace(InventarioScript playerInventory)
+    {
+        // Posiziona il torace sul tavolo
+        toracePrefab.SetActive(true);
+        playerInventory.RemoveTorace();
+        isToracePlaced = true;
+        Debug.Log("Torace posizionati sul tavolo.");
+        
 
     }
 }

@@ -10,6 +10,8 @@ public class InventarioScript : MonoBehaviour
 
     public bool hasSkull = false;
     public bool hasOmero = false;
+    public bool hasColonna = false;
+    public bool hasTorace = false;
     public bool hasKey = false;
 
     private void Start()
@@ -51,5 +53,29 @@ public class InventarioScript : MonoBehaviour
     {
         hasOmero = false;
         Debug.Log("Omeri rimossi dall'inventario!");
+    }
+
+    public void AddColonna()
+    {
+        hasColonna = true;
+        Debug.Log("Omeri raccolto!");
+    }
+
+    public void RemoveColonna()
+    {
+        hasColonna = false;
+        Debug.Log("Omeri rimossi dall'inventario!");
+    }
+
+    public void AddTorace()
+    {
+        hasTorace = true;
+        Debug.Log("Torace raccolto!");
+    }
+
+    public void RemoveTorace()
+    {
+        hasTorace = false;
+        Debug.Log("torace rimosso dall'inventario!");
     }
 }
