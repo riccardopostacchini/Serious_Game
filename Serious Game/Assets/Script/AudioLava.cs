@@ -5,7 +5,6 @@ using UnityEngine;
 public class AudioLava : MonoBehaviour
 {
     public GameObject lavaPool; // La pozza di lava con l'AudioSource
-    public string playerTag = "Giocatore"; // Il tag del giocatore
 
     private AudioSource lavaAudioSource;
 

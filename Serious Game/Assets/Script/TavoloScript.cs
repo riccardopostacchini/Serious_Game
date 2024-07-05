@@ -38,19 +38,19 @@ public class TavoloScript : MonoBehaviour, IInteractable
             {
                 PlaceSkull(playerInventory);
             }
-            else if (playerInventory.hasOmero && !isOmeroPlaced)
+            else if (playerInventory.hasOmero && isSkullPlaced && !isOmeroPlaced)
             {
                 PlaceOmero(playerInventory);
             }
-            else if (!playerInventory.hasColonna && !isColonnaPlaced)
+            else if (!playerInventory.hasColonna && isSkullPlaced && isOmeroPlaced && !isColonnaPlaced)
             {
                 PlaceColonna(playerInventory);
             }
-            else if (!playerInventory.hasTorace && !isToracePlaced)
+            else if (!playerInventory.hasTorace && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && !isToracePlaced)
             {
                 PlaceTorace(playerInventory);
             }
-            else if (!playerInventory.hasAvambraccio && !isAvambraccioPlaced)
+            else if (!playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced &&!isAvambraccioPlaced)
             {
                 PlaceAvambraccio(playerInventory);
             }
