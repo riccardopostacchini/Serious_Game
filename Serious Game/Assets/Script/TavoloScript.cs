@@ -65,7 +65,6 @@ public class TavoloScript : MonoBehaviour, IInteractable
         playerInventory.RemoveSkull();
         isSkullPlaced = true;
         Debug.Log("Teschio posizionato sul tavolo.");
-
         // Attiva l'animazione della porta
         portaAnimator.SetTrigger("Open");
         Debug.Log("Animazione della porta attivata");
