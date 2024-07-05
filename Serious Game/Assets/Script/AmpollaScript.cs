@@ -12,6 +12,8 @@ public class AmpollaScript : MonoBehaviour, IInteractable
     public GameObject ampollaVuota3;
 
     public AudioClip cassa;
+    public AudioClip sbagliato;
+    public AudioClip pozione;
     private AudioSource audioSource;
 
     private List<string> combinazioniAttivate = new List<string>();
@@ -66,6 +68,7 @@ public class AmpollaScript : MonoBehaviour, IInteractable
     public void AddProvetta(ProvettaScript provetta)
     {
         collectedProvette.Add(provetta);
+        audioSource.PlayOneShot(pozione);
         Debug.Log($"Provetta {provetta.color} aggiunta. Totale provette: {collectedProvette.Count}");
 
         if (collectedProvette.Count == 2)
@@ -99,6 +102,7 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         if (colorCombinations.ContainsKey(combinationKey))
         {
             GameObject resultAmpolla = colorCombinations[combinationKey];
+
             resultAmpolla.SetActive(true);
             Destroy(collectedProvette[0].gameObject);
             Destroy(collectedProvette[1].gameObject);
@@ -114,6 +118,7 @@ public class AmpollaScript : MonoBehaviour, IInteractable
             // Reset provette to their original positions if combination is invalid
             collectedProvette[0].ResetProvetta();
             collectedProvette[1].ResetProvetta();
+            audioSource.PlayOneShot(sbagliato);
             Debug.Log("Combinazione errata. Provette resettate.");
         }
 
