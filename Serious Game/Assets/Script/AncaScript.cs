@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColonnaScript : MonoBehaviour, IInteractable
+public class AncaScript : MonoBehaviour
 {
     public void Interact()
     {
-        CollectColonna();
+        CollectAnca();
     }
 
-    private void CollectColonna()
+    private void CollectAnca()
     {
 
         InventarioScript playerInventory = FindObjectOfType<InventarioScript>();
         if (playerInventory != null)
         {
-            playerInventory.AddColonna();
+            playerInventory.AddAnca();
             Destroy(gameObject);
         }
     }

@@ -9,6 +9,9 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public GameObject colonnaPrefab;
     public GameObject toracePrefab;
     public GameObject avambraccioPrefab;
+    public GameObject maniPrefab;
+    public GameObject ancaPrefab;
+    public GameObject femorePrefab;
 
     public AudioClip porta;
     private AudioSource audioSource;
@@ -16,14 +19,20 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public GameObject tpPuzzle;
     public GameObject tpColori;
     public GameObject tpParkour;
+    public GameObject tpStatue;
+    public GameObject tpBasket;
+    public GameObject tpScacchi;
 
     public Animator portaAnimator;
 
-    private bool isSkullPlaced = false;
-    private bool isOmeroPlaced = false;
-    private bool isColonnaPlaced = false;
-    private bool isToracePlaced = false;
-    private bool isAvambraccioPlaced = false;
+    public bool isSkullPlaced = false;
+    public bool isOmeroPlaced = false;
+    public bool isColonnaPlaced = false;
+    public bool isToracePlaced = false;
+    public bool isAvambraccioPlaced = false;
+    public bool isManiPlaced = false;
+    public bool isAncaPlaced = false;
+    public bool isFemorePlaced = false;
 
     public void Start()
     {
@@ -42,19 +51,31 @@ public class TavoloScript : MonoBehaviour, IInteractable
             {
                 PlaceOmero(playerInventory);
             }
-            else if (!playerInventory.hasColonna && isSkullPlaced && isOmeroPlaced && !isColonnaPlaced)
+            else if (playerInventory.hasColonna && isSkullPlaced && isOmeroPlaced && !isColonnaPlaced)
             {
                 PlaceColonna(playerInventory);
             }
-            else if (!playerInventory.hasTorace && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && !isToracePlaced)
+            else if (playerInventory.hasTorace && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && !isToracePlaced)
             {
                 PlaceTorace(playerInventory);
             }
-            else if (!playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced &&!isAvambraccioPlaced)
+            else if (playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced &&!isAvambraccioPlaced)
             {
                 PlaceAvambraccio(playerInventory);
             }
-        
+            else if (playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced && isAvambraccioPlaced && !isManiPlaced)
+            {
+                PlaceMani(playerInventory);
+            }
+            else if (playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced && isAvambraccioPlaced && isManiPlaced && !isAncaPlaced)
+            {
+                PlaceAnca(playerInventory);
+            }
+            else if (playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced && isAvambraccioPlaced && isManiPlaced && isAncaPlaced && !isFemorePlaced)
+            {
+                PlaceFemore(playerInventory);
+            }
+
         }
     }
 
@@ -107,10 +128,39 @@ public class TavoloScript : MonoBehaviour, IInteractable
 
     private void PlaceAvambraccio(InventarioScript playerInventory)
     {
-       
        avambraccioPrefab.SetActive(true);
         playerInventory.RemoveAvambraccio();
         isAvambraccioPlaced = true;
-  
+        tpStatue.SetActive(true);
+    }
+
+    private void PlaceMani(InventarioScript playerInventory)
+    {
+
+        maniPrefab.SetActive(true);
+        playerInventory.RemoveMani();
+        isManiPlaced = true;
+        tpBasket.SetActive(true);
+
+    }
+
+    private void PlaceAnca(InventarioScript playerInventory)
+    {
+
+        ancaPrefab.SetActive(true);
+        playerInventory.RemoveAnca();
+        isAncaPlaced = true;
+        tpScacchi.SetActive(true);
+
+    }
+
+    private void PlaceFemore(InventarioScript playerInventory)
+    {
+
+        femorePrefab.SetActive(true);
+        playerInventory.RemoveFemore();
+        isFemorePlaced = true;
+        
+
     }
 }

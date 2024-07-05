@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColonnaScript : MonoBehaviour, IInteractable
+public class ManoScript : MonoBehaviour, IInteractable
 {
     public void Interact()
     {
-        CollectColonna();
+        CollectMano();
     }
 
-    private void CollectColonna()
+    private void CollectMano()
     {
-
+        
         InventarioScript playerInventory = FindObjectOfType<InventarioScript>();
         if (playerInventory != null)
         {
             playerInventory.AddColonna();
-            Destroy(gameObject);
+            Destroy(gameObject); 
         }
     }
 }

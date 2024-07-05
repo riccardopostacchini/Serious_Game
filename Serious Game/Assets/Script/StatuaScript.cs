@@ -7,7 +7,7 @@ public class StatuaScript : MonoBehaviour
 {
     [Header("TextMeshPro Elements")]
     public TextMeshPro redValueText;
-    public TextMeshPro  blueValueText;
+    public TextMeshPro blueValueText;
 
     [Header("Correct Values")]
     public int correctRedValue;
@@ -19,12 +19,19 @@ public class StatuaScript : MonoBehaviour
     private int currentRedValue;
     private int currentBlueValue;
 
+    private ManagerStatue puzzleManager;
+
     private void Start()
     {
         // Initialize the values on the monitor
         currentRedValue = 0;
         currentBlueValue = 0;
         UpdateMonitor();
+    }
+
+    public void SetPuzzleManager(ManagerStatue manager)
+    {
+        puzzleManager = manager;
     }
 
     public void IncreaseRedValue()
@@ -66,7 +73,14 @@ public class StatuaScript : MonoBehaviour
         if (currentRedValue == correctRedValue && currentBlueValue == correctBlueValue)
         {
             redEyes.SetActive(false);
+            Destroy(blueValueText);
+            Destroy(redValueText);
             DisableButtons();
+
+            if (puzzleManager != null)
+            {
+                puzzleManager.NotifyStatueSolved();
+            }
         }
     }
 

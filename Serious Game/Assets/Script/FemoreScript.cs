@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColonnaScript : MonoBehaviour, IInteractable
+public class FemoreScript : MonoBehaviour
 {
     public void Interact()
     {
-        CollectColonna();
+        CollectFemore();
     }
 
-    private void CollectColonna()
+    private void CollectFemore()
     {
 
         InventarioScript playerInventory = FindObjectOfType<InventarioScript>();
         if (playerInventory != null)
         {
-            playerInventory.AddColonna();
+            playerInventory.AddFemore();
             Destroy(gameObject);
         }
     }

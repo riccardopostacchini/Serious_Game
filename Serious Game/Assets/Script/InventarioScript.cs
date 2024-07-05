@@ -13,6 +13,9 @@ public class InventarioScript : MonoBehaviour
     public bool hasColonna = false;
     public bool hasTorace = false;
     public bool hasAvambraccio = false;
+    public bool hasMani = false;
+    public bool hasAnca = false;
+    public bool hasFemore = false;
     public bool hasKey = false;
 
     private void Start()
@@ -59,13 +62,13 @@ public class InventarioScript : MonoBehaviour
     public void AddColonna()
     {
         hasColonna = true;
-        Debug.Log("Omeri raccolto!");
+       
     }
 
     public void RemoveColonna()
     {
         hasColonna = false;
-        Debug.Log("Omeri rimossi dall'inventario!");
+        
     }
 
     public void AddTorace()
@@ -90,5 +93,41 @@ public class InventarioScript : MonoBehaviour
     {
         hasAvambraccio = false;
         
+    }
+
+    public void AddMani()
+    {
+        hasMani = true;
+
+    }
+
+    public void RemoveMani()
+    {
+        hasMani = false;
+
+    }
+
+    public void AddAnca()
+    {
+        hasAnca = true;
+
+    }
+
+    public void RemoveAnca()
+    {
+        hasAnca = false;
+
+    }
+
+    public void AddFemore()
+    {
+        hasFemore = true;
+
+    }
+
+    public void RemoveFemore()
+    {
+        hasFemore = false;
+
     }
 }
