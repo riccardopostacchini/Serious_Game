@@ -6,6 +6,8 @@ public class CanestroScript : MonoBehaviour
 {
     public AudioClip activationSound; // Il suono da riprodurre
     public AudioClip cassaSound;
+
+    public GameObject muretto;
     public Animator animator; // L'animator per avviare l'animazione
     public string animationTriggerName = "Open"; // Il nome del trigger dell'animazione
 
@@ -26,6 +28,7 @@ public class CanestroScript : MonoBehaviour
         // Controlla se l'oggetto che attraversa il trigger ha il tag "palla"
         if (other.CompareTag("palla"))
         {
+            Destroy(muretto);
             PlaySound();
             StartAnimation();
         }
