@@ -15,7 +15,7 @@ public class AvambraccioScript : MonoBehaviour, IInteractable
         InventarioScript playerInventory = FindObjectOfType<InventarioScript>();
         if (playerInventory != null)
         {
-            playerInventory.AddTorace();
+            playerInventory.AddAvambraccio();
             Destroy(gameObject); 
         }
     }

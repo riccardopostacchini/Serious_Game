@@ -47,36 +47,36 @@ public class TavoloScript : MonoBehaviour, IInteractable
             {
                 PlaceSkull(playerInventory);
             }
-            else if (playerInventory.hasOmero && isSkullPlaced && !isOmeroPlaced)
+            else if (playerInventory.hasOmero && !isOmeroPlaced)
             {
                 PlaceOmero(playerInventory);
             }
-            else if (playerInventory.hasColonna && isSkullPlaced && isOmeroPlaced && !isColonnaPlaced)
+            else if (playerInventory.hasColonna && !isColonnaPlaced)
             {
                 PlaceColonna(playerInventory);
             }
-            else if (playerInventory.hasTorace && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && !isToracePlaced)
+            else if (playerInventory.hasTorace && !isToracePlaced)
             {
                 PlaceTorace(playerInventory);
             }
-            else if (playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced &&!isAvambraccioPlaced)
+            else if (playerInventory.hasAvambraccio && !isAvambraccioPlaced)
             {
                 PlaceAvambraccio(playerInventory);
             }
-            else if (playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced && isAvambraccioPlaced && !isManiPlaced)
+            else if (playerInventory.hasMani && !isManiPlaced)
             {
                 PlaceMani(playerInventory);
             }
-            else if (playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced && isAvambraccioPlaced && isManiPlaced && !isAncaPlaced)
+            else if (playerInventory.hasAnca  && !isAncaPlaced)
             {
                 PlaceAnca(playerInventory);
             }
-            else if (playerInventory.hasAvambraccio && isSkullPlaced && isOmeroPlaced && isColonnaPlaced && isToracePlaced && isAvambraccioPlaced && isManiPlaced && isAncaPlaced && !isFemorePlaced)
+            else if (playerInventory.hasFemore && !isFemorePlaced)
             {
                 PlaceFemore(playerInventory);
             }
 
-        }
+        }   
     }
 
     private void PlaceSkull(InventarioScript playerInventory)
