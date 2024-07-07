@@ -12,6 +12,7 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public GameObject maniPrefab;
     public GameObject ancaPrefab;
     public GameObject femorePrefab;
+    public GameObject tibiaPrefab;
 
     public AudioClip porta;
     private AudioSource audioSource;
@@ -22,6 +23,7 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public GameObject tpStatue;
     public GameObject tpBasket;
     public GameObject tpScacchi;
+    public GameObject tpLogica;
 
     public Animator portaAnimator;
 
@@ -33,6 +35,7 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public bool isManiPlaced = false;
     public bool isAncaPlaced = false;
     public bool isFemorePlaced = false;
+    public bool isTibiaPlaced = false;
 
     public void Start()
     {
@@ -74,6 +77,10 @@ public class TavoloScript : MonoBehaviour, IInteractable
             else if (playerInventory.hasFemore && !isFemorePlaced)
             {
                 PlaceFemore(playerInventory);
+            }
+            else if (playerInventory.hasTibia && !isTibiaPlaced)
+            {
+                PlaceTibia(playerInventory);
             }
 
         }   
@@ -160,7 +167,14 @@ public class TavoloScript : MonoBehaviour, IInteractable
         femorePrefab.SetActive(true);
         playerInventory.RemoveFemore();
         isFemorePlaced = true;
-        
+        tpLogica.SetActive(true);
 
+
+    }
+    private void PlaceTibia(InventarioScript playerInventory)
+    {
+        tibiaPrefab.SetActive(true);
+        playerInventory.RemoveTibia();
+        isTibiaPlaced = true;
     }
 }
