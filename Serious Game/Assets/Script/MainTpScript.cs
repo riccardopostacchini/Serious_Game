@@ -17,6 +17,18 @@ public class MainTpScript : MonoBehaviour
             // Teletrasporta il giocatore alla nuova posizione
             Giocatore.transform.position = Destinazione.position;
             Debug.Log("Giocatore teletrasportato alla nuova posizione.");
+
+            Rigidbody giocatoreRigidbody = Giocatore.GetComponent<Rigidbody>();
+            if (giocatoreRigidbody != null)
+            {
+                giocatoreRigidbody.velocity = Vector3.zero;
+                giocatoreRigidbody.angularVelocity = Vector3.zero;
+                Debug.Log("Velocità del giocatore impostata a 0.");
+            }
+            else
+            {
+                Debug.LogWarning("Rigidbody non trovato sul giocatore.");
+            }
         }
     }
 }

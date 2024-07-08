@@ -86,7 +86,7 @@ public class TavoloScript : MonoBehaviour, IInteractable
             {
                 PlaceTibia(playerInventory);
             }
-            else if(!playerInventory.hasPiedi && !isPiediPlaced)
+            else if(playerInventory.hasPiedi && !isPiediPlaced)
             {
                 PlacePiedi(playerInventory);
             }
@@ -189,8 +189,9 @@ public class TavoloScript : MonoBehaviour, IInteractable
     private void PlacePiedi(InventarioScript playerInventory)
     {
         piediPrefab.SetActive(true);
-        playerInventory.RemoveTibia();
+        playerInventory.RemovePiedi();
         isPiediPlaced = true;
+        tpVittoria.SetActive(true);
 
     }
 }
