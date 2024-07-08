@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Puzzle.unity
     guid: 64f94beed20c5453095ee5bd1e62247b
+  - enabled: 1
+    path: Assets/Scenes/Vittoria.unity
+    guid: e3fe7953cc55f364ebf8d1be9dafd48a
   m_configObjects: {}
