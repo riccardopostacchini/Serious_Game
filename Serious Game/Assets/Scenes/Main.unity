@@ -25661,6 +25661,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1364192990}
+  - component: {fileID: 1364192991}
   m_Layer: 0
   m_Name: ampollevuote
   m_TagString: Untagged
@@ -25686,6 +25687,18 @@ Transform:
   - {fileID: 2083483626}
   m_Father: {fileID: 543450653001911724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1364192991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364192989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a693f6cfecc2841b5fa22ed35043a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1370304298
 GameObject:
   m_ObjectHideFlags: 0
@@ -35796,7 +35809,7 @@ Transform:
   m_GameObject: {fileID: 1895207053}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0011810526, y: -0.00017519158, z: 0.00007094797, w: 0.9999993}
-  m_LocalPosition: {x: 0, y: -0.28, z: -17.53}
+  m_LocalPosition: {x: -34.2, y: -0.23, z: -39.82}
   m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
