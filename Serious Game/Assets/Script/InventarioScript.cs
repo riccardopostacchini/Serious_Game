@@ -17,6 +17,7 @@ public class InventarioScript : MonoBehaviour
     public bool hasAnca = false;
     public bool hasFemore = false;
     public bool hasTibia = false;
+    public bool hasPiedi = false;
     public bool hasKey = false;
 
     private void Start()
@@ -141,6 +142,18 @@ public class InventarioScript : MonoBehaviour
     public void RemoveTibia()
     {
         hasTibia = false;
+
+    }
+
+    public void AddPiedi()
+    {
+        hasPiedi = true;
+
+    }
+
+    public void RemovePiedi()
+    {
+        hasPiedi = false;
 
     }
 }
