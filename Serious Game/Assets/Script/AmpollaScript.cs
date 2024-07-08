@@ -16,8 +16,6 @@ public class AmpollaScript : MonoBehaviour, IInteractable
     public AudioClip pozione;
     private AudioSource audioSource;
 
-    private List<string> combinazioniAttivate = new List<string>();
-
     public Animator animator;
 
     public float distanceFromPlayer = 0.75f; // Distanza dal giocatore
@@ -32,7 +30,7 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         audioSource = GetComponent<AudioSource>();
     }
 
-        public void Update()
+    public void Update()
     {
         Debug.Log("Stato di isCollected: " + isCollected);
     }
@@ -61,7 +59,6 @@ public class AmpollaScript : MonoBehaviour, IInteractable
             transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 10);
             transform.rotation = Quaternion.LookRotation(playerCameraTransform.forward, Vector3.up);
             yield return null;
-            
         }
     }
 
@@ -83,11 +80,14 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         string color2 = collectedProvette[1].color;
         string combinationKey = color1 + "_" + color2;
 
-        if (combinazioniAttivate.Contains(combinationKey))
+        if (ManagerAmpollaScript.Instance.IsCombinationActivated(combinationKey))
         {
             Debug.Log($"Combinazione {combinationKey} già attivata. Impossibile ripeterla.");
+            audioSource.PlayOneShot(sbagliato);
+            collectedProvette.Clear(); // Reset del contatore
             return;
         }
+
         // Dictionary with valid combinations
         Dictionary<string, GameObject> colorCombinations = new Dictionary<string, GameObject>
         {
@@ -102,16 +102,12 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         if (colorCombinations.ContainsKey(combinationKey))
         {
             GameObject resultAmpolla = colorCombinations[combinationKey];
-
             resultAmpolla.SetActive(true);
             Destroy(collectedProvette[0].gameObject);
             Destroy(collectedProvette[1].gameObject);
             DestroyAmpollaVuota();
             Debug.Log($"Combinazione corretta: {combinationKey}. Ampolla {resultAmpolla.name} attivata.");
-
-            combinazioniAttivate.Add(combinationKey);
-
-
+            ManagerAmpollaScript.Instance.AddCombination(combinationKey);
         }
         else
         {
@@ -155,7 +151,6 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         {
             audioSource.PlayOneShot(cassa);
             AvviaAnimazione();
-            
             Debug.Log("Animazione attivata");
             Destroy(ampollaVuota3);
             Debug.LogError("Nessuna ampolla vuota disponibile.");
@@ -171,10 +166,11 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         {
             animator.SetTrigger("Open"); // Imposta il trigger per avviare l'animazione
         }
-        
     }
+
     public bool IsCollected()
     {
         return isCollected;
     }
 }
+
