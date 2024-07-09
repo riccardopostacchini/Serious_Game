@@ -1,28 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraScript : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    public float sensX = 100f;
+    public float sensY = 100f;
 
     public Transform orientation;
 
     float xRotation;
     float yRotation;
-    // Start is called before the first frame update
+
+    public Slider sensitivitySlider; // Aggiungi questa variabile per il riferimento allo slider
+
+    private float sensitivityMultiplier = 1f;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Assicurati che il valore iniziale dello slider corrisponda alla sensibilità iniziale
+        if (sensitivitySlider != null)
+        {
+            sensitivitySlider.value = sensitivityMultiplier;
+            sensitivitySlider.onValueChanged.AddListener(UpdateSensitivity); // Aggiungi il listener per lo slider
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
+        // Applica la sensibilità del mouse
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX * sensitivityMultiplier;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY * sensitivityMultiplier;
 
         yRotation += mouseX;
 
@@ -31,5 +41,11 @@ public class CameraScript : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+    }
+
+    // Metodo per aggiornare la sensibilità in base al valore dello slider
+    public void UpdateSensitivity(float newSensitivity)
+    {
+        sensitivityMultiplier = newSensitivity;
     }
 }
