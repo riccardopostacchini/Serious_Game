@@ -13,6 +13,7 @@ public class KeypadScript : MonoBehaviour
     public AudioClip SuonoClick;
     public AudioClip SuonoCorretto;
     public AudioClip SuonoErrato;
+    public AudioClip cassa;
     AudioSource audioSource;
 
     public Animator animator;
@@ -36,6 +37,7 @@ public class KeypadScript : MonoBehaviour
             {
                 Debug.Log("password corretta");
                 audioSource.PlayOneShot(SuonoCorretto);
+                audioSource.PlayOneShot(cassa);
                 animator.SetTrigger("Open");
                 inputDisplay.text = "Corretto";
             }

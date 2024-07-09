@@ -5,13 +5,14 @@ using UnityEngine;
 public class CanestroScript : MonoBehaviour
 {
     public AudioClip activationSound; // Il suono da riprodurre
-    public AudioClip cassaSound;
+    
 
     public GameObject muretto;
     public Animator animator; // L'animator per avviare l'animazione
     public string animationTriggerName = "Open"; // Il nome del trigger dell'animazione
 
     private AudioSource audioSource;
+    
 
     private void Start()
     {
@@ -39,7 +40,6 @@ public class CanestroScript : MonoBehaviour
         if (activationSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(activationSound);
-            audioSource.PlayOneShot(cassaSound);
         }
         else
         {

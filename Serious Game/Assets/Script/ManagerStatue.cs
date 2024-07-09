@@ -7,10 +7,14 @@ public class ManagerStatue : MonoBehaviour
     public StatuaScript[] statuePuzzles;
     public Animator animator;
 
+    private AudioSource audioSource;
+    public AudioClip cassa;
+
     private int statuesSolvedCount = 0;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         foreach (var statuePuzzle in statuePuzzles)
         {
             statuePuzzle.SetPuzzleManager(this);
@@ -23,6 +27,7 @@ public class ManagerStatue : MonoBehaviour
         if (statuesSolvedCount >= statuePuzzles.Length)
         {
             StartAnimation();
+            audioSource.PlayOneShot(cassa);
         }
     }
 

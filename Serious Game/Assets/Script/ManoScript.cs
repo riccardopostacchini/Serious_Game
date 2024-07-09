@@ -15,7 +15,7 @@ public class ManoScript : MonoBehaviour, IInteractable
         InventarioScript playerInventory = FindObjectOfType<InventarioScript>();
         if (playerInventory != null)
         {
-            playerInventory.AddColonna();
+            playerInventory.AddMani();
             Destroy(gameObject); 
         }
     }
