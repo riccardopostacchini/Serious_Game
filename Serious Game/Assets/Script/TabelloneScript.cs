@@ -7,6 +7,8 @@ public class TabelloneScript : MonoBehaviour, IInteractable
     public List<GameObject> puzzleSlots; // Lista degli slot dei pezzi di puzzle sul tabellone
     public Animator Animator;
 
+    public GameObject Teletrasporto;
+
     public AudioClip placeSound;
     public AudioClip openSound;
     public AudioClip victorySound;
@@ -69,6 +71,7 @@ public class TabelloneScript : MonoBehaviour, IInteractable
             audioSource.PlayOneShot(victorySound);
             Animator.SetTrigger("Open");
             audioSource.PlayOneShot(openSound);
+            Teletrasporto.SetActive(true);
         }
     }
 }

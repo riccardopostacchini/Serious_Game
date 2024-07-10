@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ManagerStatue : MonoBehaviour
 {
+    public GameObject Teletrasporto;
+
     public StatuaScript[] statuePuzzles;
     public Animator animator;
 
@@ -27,6 +29,7 @@ public class ManagerStatue : MonoBehaviour
         if (statuesSolvedCount >= statuePuzzles.Length)
         {
             StartAnimation();
+            Teletrasporto.SetActive(true);
             audioSource.PlayOneShot(cassa);
         }
     }

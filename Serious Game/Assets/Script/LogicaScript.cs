@@ -8,7 +8,7 @@ public class LogicaScript : MonoBehaviour
     public string password = "185";
     private string InputUser = "";
 
-
+    public GameObject Teletrasporto;
 
     public AudioClip SuonoClick;
     public AudioClip SuonoCorretto;
@@ -39,6 +39,7 @@ public class LogicaScript : MonoBehaviour
                 audioSource.PlayOneShot(SuonoCorretto);
                 audioSource.PlayOneShot(cassa);
                 animator.SetTrigger("Open");
+                Teletrasporto.SetActive(true);
                 inputDisplay.text = "Corretto";
             }
             else

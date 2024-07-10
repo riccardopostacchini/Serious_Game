@@ -8,6 +8,8 @@ public class CanestroScript : MonoBehaviour
     
 
     public GameObject muretto;
+    public GameObject Teletrasporto;
+
     public Animator animator; // L'animator per avviare l'animazione
     public string animationTriggerName = "Open"; // Il nome del trigger dell'animazione
 
@@ -31,6 +33,7 @@ public class CanestroScript : MonoBehaviour
         {
             Destroy(muretto);
             PlaySound();
+            Teletrasporto.SetActive(true);
             StartAnimation();
         }
     }

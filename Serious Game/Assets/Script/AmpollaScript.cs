@@ -10,6 +10,7 @@ public class AmpollaScript : MonoBehaviour, IInteractable
     public GameObject ampollaVuota;
     public GameObject ampollaVuota2;
     public GameObject ampollaVuota3;
+    public GameObject Teletrasporto;
 
     public AudioClip cassa;
     public AudioClip sbagliato;
@@ -151,6 +152,7 @@ public class AmpollaScript : MonoBehaviour, IInteractable
         {
             audioSource.PlayOneShot(cassa);
             AvviaAnimazione();
+            Teletrasporto.SetActive(true);
             Debug.Log("Animazione attivata");
             Destroy(ampollaVuota3);
             Debug.LogError("Nessuna ampolla vuota disponibile.");

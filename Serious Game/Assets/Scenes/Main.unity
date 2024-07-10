@@ -1258,7 +1258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a75658c343af4c90b85ace7bff8e156, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.58837295
+      value: 0.761
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3a75658c343af4c90b85ace7bff8e156, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7380,14 +7380,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426839576}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2084, y: -0.09870148, z: -14.408001}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5.332, y: -0.09870148, z: -32.66}
   m_LocalScale: {x: 0.98519087, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1091615249}
+  - {fileID: 518267898}
   m_Father: {fileID: 1593317508}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &426839578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8835,6 +8836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   password: 6229314
+  Teletrasporto: {fileID: 872923278}
   SuonoClick: {fileID: 8300000, guid: 2b8894702e01628498a3c859e6d441f7, type: 3}
   SuonoCorretto: {fileID: 8300000, guid: ae615ec737027de4485ed59c7d8fb295, type: 3}
   SuonoErrato: {fileID: 8300000, guid: 024de76dba369274c95980d7725f6ab9, type: 3}
@@ -9968,19 +9970,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1157975913}
+    m_TransformParent: {fileID: 426839577}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.22222224
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0150315
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.88362265
+      value: 0.014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6916167
+      value: 0.018
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.241373
+      value: 14.519
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9988,15 +9998,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10013,6 +10023,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_Name
       value: Porta
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228206953210982987, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100.94509
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228206953210982987, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228206953210982987, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1686
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228206953210982987, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.8061
       objectReference: {fileID: 0}
     - target: {fileID: 4843089199267042796, guid: 1b3727c60758043c69c45bc3024fa538, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15710,6 +15736,7 @@ MonoBehaviour:
   - {fileID: 95948312}
   - {fileID: 70048192}
   Animator: {fileID: 1284072305}
+  Teletrasporto: {fileID: 1079369001}
   placeSound: {fileID: 8300000, guid: 2192102f17bfa954084ad50905b3261f, type: 3}
   openSound: {fileID: 8300000, guid: 35f11c2cc74d4af47b1461649cc8f927, type: 3}
   victorySound: {fileID: 8300000, guid: a218005a81d828443baaf990e8d20b50, type: 3}
@@ -16248,6 +16275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184f19136bfee2f4ea72de4c4fdea8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Teletrasporto: {fileID: 684917166}
   statuePuzzles:
   - {fileID: 3904454423998129291}
   - {fileID: 8338500347089163582}
@@ -17859,6 +17887,7 @@ MonoBehaviour:
   ampollaVuota: {fileID: 2083483625}
   ampollaVuota2: {fileID: 1029780243}
   ampollaVuota3: {fileID: 865839029}
+  Teletrasporto: {fileID: 559578860}
   cassa: {fileID: 8300000, guid: 35f11c2cc74d4af47b1461649cc8f927, type: 3}
   sbagliato: {fileID: 8300000, guid: 9d5bb6fabfaeeb34fbbeeedc462a82a9, type: 3}
   pozione: {fileID: 8300000, guid: 909dc9ea3c0556b45b4deed65e1f4a4c, type: 3}
@@ -21264,9 +21293,6 @@ PrefabInstance:
       addedObject: {fileID: 702652835}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 50d57a0915a154c198ed334f653d39c1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1157975913}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 50d57a0915a154c198ed334f653d39c1, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1489226470}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 50d57a0915a154c198ed334f653d39c1, type: 3}
       insertIndex: -1
@@ -22440,6 +22466,7 @@ MonoBehaviour:
   ampollaVuota: {fileID: 2083483625}
   ampollaVuota2: {fileID: 1029780243}
   ampollaVuota3: {fileID: 865839029}
+  Teletrasporto: {fileID: 559578860}
   cassa: {fileID: 8300000, guid: 35f11c2cc74d4af47b1461649cc8f927, type: 3}
   sbagliato: {fileID: 8300000, guid: 9d5bb6fabfaeeb34fbbeeedc462a82a9, type: 3}
   pozione: {fileID: 8300000, guid: 909dc9ea3c0556b45b4deed65e1f4a4c, type: 3}
@@ -26492,38 +26519,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156675917}
   m_Mesh: {fileID: -2218282630297590911, guid: 9069cdab3d59e4b51a81a3387382a9d4, type: 3}
---- !u!1 &1157975912
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1157975913}
-  m_Layer: 0
-  m_Name: Portale (15)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1157975913
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157975912}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1, y: 0.64, z: -13.309}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 518267898}
-  m_Father: {fileID: 1593317508}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1158042271
 GameObject:
   m_ObjectHideFlags: 0
@@ -33349,6 +33344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   password: 185
+  Teletrasporto: {fileID: 511519331}
   SuonoClick: {fileID: 8300000, guid: 2b8894702e01628498a3c859e6d441f7, type: 3}
   SuonoCorretto: {fileID: 8300000, guid: ae615ec737027de4485ed59c7d8fb295, type: 3}
   SuonoErrato: {fileID: 8300000, guid: 024de76dba369274c95980d7725f6ab9, type: 3}
@@ -34183,6 +34179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationSound: {fileID: 8300000, guid: e2c694be673182248b20ced32bc22c4d, type: 3}
   muretto: {fileID: 1273492478}
+  Teletrasporto: {fileID: 1750568468}
   animator: {fileID: 1052098612}
   animationTriggerName: Open
 --- !u!65 &1497665236
@@ -43236,7 +43233,7 @@ Transform:
   m_GameObject: {fileID: 1895207053}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0011810526, y: -0.00017519158, z: 0.00007094797, w: 0.9999993}
-  m_LocalPosition: {x: 0, y: 0, z: -17.05}
+  m_LocalPosition: {x: 0, y: -0.76, z: -17.05}
   m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43828,7 +43825,7 @@ MonoBehaviour:
   Destinazione: {fileID: 1120976035}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 1817866412}
-  TeletrasportoDisattivato: {fileID: 426839576}
+  TeletrasportoDisattivato: {fileID: 0}
 --- !u!65 &1930372479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47019,6 +47016,7 @@ MonoBehaviour:
   ampollaVuota: {fileID: 2083483625}
   ampollaVuota2: {fileID: 1029780243}
   ampollaVuota3: {fileID: 865839029}
+  Teletrasporto: {fileID: 559578860}
   cassa: {fileID: 8300000, guid: 35f11c2cc74d4af47b1461649cc8f927, type: 3}
   sbagliato: {fileID: 8300000, guid: 9d5bb6fabfaeeb34fbbeeedc462a82a9, type: 3}
   pozione: {fileID: 8300000, guid: 909dc9ea3c0556b45b4deed65e1f4a4c, type: 3}
