@@ -8,6 +8,7 @@ public class PuzzleTpScript : MonoBehaviour
     public Transform Destinazione;
     public GameObject Giocatore;
     public GameObject TriggerDialogo;
+    public GameObject TeletrasportoDisattivato;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,7 @@ public class PuzzleTpScript : MonoBehaviour
             TriggerDialogo.SetActive(true);
             // Teletrasporta il giocatore alla nuova posizione
             Giocatore.transform.position = Destinazione.position;
+            TeletrasportoDisattivato.SetActive(false);
             Debug.Log("Giocatore teletrasportato alla nuova posizione.");
 
             Rigidbody giocatoreRigidbody = Giocatore.GetComponent<Rigidbody>();

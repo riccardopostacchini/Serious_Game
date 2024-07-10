@@ -345,19 +345,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1700919380}
+    m_TransformParent: {fileID: 872923279}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 59.03746
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 33.995106
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.86362267
+      value: 0.012932326
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8783833
+      value: 0.33259568
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6186256
+      value: -0.507946
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -838,6 +846,7 @@ MonoBehaviour:
   Destinazione: {fileID: 994059036}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 1827077333}
+  TeletrasportoDisattivato: {fileID: 559578860}
 --- !u!65 &46603167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4785,6 +4794,7 @@ MonoBehaviour:
   Destinazione: {fileID: 1358529020}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 779413961}
+  TeletrasportoDisattivato: {fileID: 511519331}
 --- !u!65 &251756939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7374,7 +7384,8 @@ Transform:
   m_LocalPosition: {x: 0.2084, y: -0.09870148, z: -14.408001}
   m_LocalScale: {x: 0.98519087, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1091615249}
   m_Father: {fileID: 1593317508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &426839578
@@ -9724,7 +9735,8 @@ Transform:
   m_LocalPosition: {x: 0.26, y: -0.066, z: -14.471}
   m_LocalScale: {x: 0.8, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1272063094}
   m_Father: {fileID: 543450653014602828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &511519333
@@ -10746,7 +10758,8 @@ Transform:
   m_LocalPosition: {x: -27.08915, y: 44.92102, z: 9.989204}
   m_LocalScale: {x: 1.33, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1167236098}
   m_Father: {fileID: 1229480418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &559578862
@@ -11798,7 +11811,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1873596035}
   - {fileID: 1653338562}
   m_Father: {fileID: 1663392881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12262,6 +12274,7 @@ MonoBehaviour:
   Destinazione: {fileID: 1003699666}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 1322791323}
+  TeletrasportoDisattivato: {fileID: 872923278}
 --- !u!1 &632759361
 GameObject:
   m_ObjectHideFlags: 0
@@ -13195,7 +13208,8 @@ Transform:
   m_LocalPosition: {x: 0.085998535, y: -0.09870148, z: -14.380255}
   m_LocalScale: {x: 1.33, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1272541515}
   m_Father: {fileID: 543450651825895654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &684917168
@@ -13483,7 +13497,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1167236098}
   - {fileID: 1099715446}
   m_Father: {fileID: 1229480418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14432,6 +14445,7 @@ MonoBehaviour:
   Destinazione: {fileID: 1337775671}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 0}
+  TeletrasportoDisattivato: {fileID: 0}
 --- !u!65 &725767372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14824,6 +14838,7 @@ MonoBehaviour:
   Destinazione: {fileID: 2117724411}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 908743695}
+  TeletrasportoDisattivato: {fileID: 0}
 --- !u!65 &739112475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16648,27 +16663,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 965015055}
+    m_TransformParent: {fileID: 1750568469}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 73.45158
+      value: 55.22675
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150.28694
+      value: 33.397102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8696
+      value: 0.12435913
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8513
+      value: 0.37088925
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6186
+      value: -0.5195999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18099,7 +18114,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.099999994, z: -14.4}
   m_LocalScale: {x: 1.33, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 313949069}
   m_Father: {fileID: 1807278166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &872923280
@@ -20374,7 +20390,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 815369371}
   - {fileID: 1920964013}
   m_Father: {fileID: 543450652963175174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20711,7 +20726,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1272063094}
   - {fileID: 2074053828}
   m_Father: {fileID: 543450653014602828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22299,6 +22313,7 @@ MonoBehaviour:
   Destinazione: {fileID: 211345202}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 1392918261}
+  TeletrasportoDisattivato: {fileID: 1079369001}
 --- !u!1 &1029780243
 GameObject:
   m_ObjectHideFlags: 0
@@ -24078,7 +24093,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.1, z: -14.4}
   m_LocalScale: {x: 1.33, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1873596035}
   m_Father: {fileID: 2003843932}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1079369003
@@ -24483,27 +24499,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1157975913}
+    m_TransformParent: {fileID: 426839577}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 73.45158
+      value: 74.55568
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150.28694
+      value: 33.397102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8696
+      value: 0.022330787
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8513
+      value: 0.35333368
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6186
+      value: -0.5195999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26306,6 +26322,7 @@ MonoBehaviour:
   Destinazione: {fileID: 2082473745}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 25641338}
+  TeletrasportoDisattivato: {fileID: 684917166}
 --- !u!65 &1150310451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26504,7 +26521,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1091615249}
   - {fileID: 518267898}
   m_Father: {fileID: 1593317508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26692,27 +26708,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 693251373}
+    m_TransformParent: {fileID: 559578861}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 73.45158
+      value: 55.22675
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150.28694
+      value: 33.397102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8696
+      value: -0.007107383
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8513
+      value: 0.36206228
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6186
+      value: -0.51880646
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28823,27 +28839,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 979751334}
+    m_TransformParent: {fileID: 511519332}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 73.45158
+      value: 91.81447
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150.28694
+      value: 33.397102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8696
+      value: -0.050751865
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8513
+      value: 0.36362225
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6186
+      value: -0.57260036
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28963,27 +28979,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1525562104}
+    m_TransformParent: {fileID: 684917167}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 73.45158
+      value: 55.22675
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150.28694
+      value: 33.397102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8696
+      value: -0.0718798
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8513
+      value: 0.37088925
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6186
+      value: -0.5273447
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31924,6 +31940,7 @@ MonoBehaviour:
   Destinazione: {fileID: 581705588}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 146066180}
+  TeletrasportoDisattivato: {fileID: 1750568468}
 --- !u!65 &1406654507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34645,7 +34662,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1272541515}
   - {fileID: 266177180}
   m_Father: {fileID: 543450651825895654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38320,7 +38336,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 313949069}
   - {fileID: 351272168}
   m_Father: {fileID: 1807278166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38750,6 +38765,7 @@ MonoBehaviour:
   Destinazione: {fileID: 1337775671}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 1661063614}
+  TeletrasportoDisattivato: {fileID: 0}
 --- !u!65 &1714825605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39588,7 +39604,8 @@ Transform:
   m_LocalPosition: {x: -0.15399933, y: -0.09870148, z: -14.041}
   m_LocalScale: {x: 1.33, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 815369371}
   m_Father: {fileID: 543450652963175174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1750568470
@@ -42405,27 +42422,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 607660057}
+    m_TransformParent: {fileID: 1079369002}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 73.45158
+      value: 55.22675
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150.28694
+      value: 33.397102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8696
+      value: -0.010077397
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8513
+      value: 0.32571214
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6186
+      value: -0.5254364
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17f0e62b5e49a44aa949a2db4fb183cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43811,6 +43828,7 @@ MonoBehaviour:
   Destinazione: {fileID: 1120976035}
   Giocatore: {fileID: 1895207053}
   TriggerDialogo: {fileID: 1817866412}
+  TeletrasportoDisattivato: {fileID: 426839576}
 --- !u!65 &1930372479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45094,6 +45112,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1079369002}
   - {fileID: 543450653113924591}
   - {fileID: 1701596462}
   - {fileID: 1065258839}
@@ -45106,7 +45125,6 @@ Transform:
   - {fileID: 1218365412}
   - {fileID: 2094432540}
   - {fileID: 1437017382}
-  - {fileID: 1079369002}
   m_Father: {fileID: 1663392881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005832831 stripped
