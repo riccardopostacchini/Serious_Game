@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TavoloScript : MonoBehaviour, IInteractable
 {
     public GameObject skullPrefab;
@@ -41,9 +42,13 @@ public class TavoloScript : MonoBehaviour, IInteractable
     public bool isTibiaPlaced = false;
     public bool isPiediPlaced = false;
 
+  
+
+
     public void Start()
     {
         audioSource = GetComponent<AudioSource>();
+       
     }
     public void Interact()
     {
@@ -98,13 +103,12 @@ public class TavoloScript : MonoBehaviour, IInteractable
         // Posiziona il teschio sul tavolo
         skullPrefab.SetActive(true);
         playerInventory.RemoveSkull();
-        isSkullPlaced = true;
-        Debug.Log("Teschio posizionato sul tavolo.");
+        isSkullPlaced = true;        
         // Attiva l'animazione della porta
         portaAnimator.SetTrigger("Open");
-        Debug.Log("Animazione della porta attivata");
-        audioSource.PlayOneShot(porta);
+        audioSource.PlayOneShot(porta);      
     }
+        
 
     private void PlaceOmero(InventarioScript playerInventory)
     {
@@ -112,7 +116,6 @@ public class TavoloScript : MonoBehaviour, IInteractable
         omeriPrefab.SetActive(true);
         playerInventory.RemoveOmero();
         isOmeroPlaced = true;
-        Debug.Log("Omeri posizionati sul tavolo.");
         tpPuzzle.SetActive(true);
 
     }
@@ -123,7 +126,6 @@ public class TavoloScript : MonoBehaviour, IInteractable
         colonnaPrefab.SetActive(true);
         playerInventory.RemoveColonna();
         isColonnaPlaced = true;
-        Debug.Log("Colonna posizionata sul tavolo.");
         tpColori.SetActive(true);
 
     }
@@ -134,7 +136,6 @@ public class TavoloScript : MonoBehaviour, IInteractable
         toracePrefab.SetActive(true);
         playerInventory.RemoveTorace();
         isToracePlaced = true;
-        Debug.Log("Torace posizionati sul tavolo.");
         tpParkour.SetActive(true);
 
 
@@ -194,4 +195,6 @@ public class TavoloScript : MonoBehaviour, IInteractable
         tpVittoria.SetActive(true);
 
     }
+
 }
+

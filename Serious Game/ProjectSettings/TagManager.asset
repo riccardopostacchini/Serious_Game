@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Giocatore
   - palla
+  - Scheletro
   layers:
   - Default
   - TransparentFX
