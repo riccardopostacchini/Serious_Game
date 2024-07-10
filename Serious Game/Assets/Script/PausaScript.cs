@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PausaScript : MonoBehaviour
 {
     public GameObject menuPausa;
+    public GameObject boxDialogo;
 
     public static bool inPausa;
     // Start is called before the first frame update
@@ -22,10 +23,13 @@ public class PausaScript : MonoBehaviour
             if (inPausa)
             {
                 Riprendi();
+                if (DialogoScript.isTyping)
+                boxDialogo.SetActive(true);
             }
             else
             {
                 Pausa();
+                boxDialogo.SetActive(false);
             }
         }
 

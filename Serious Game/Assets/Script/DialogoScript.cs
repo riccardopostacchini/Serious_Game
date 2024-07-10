@@ -10,7 +10,7 @@ public class DialogoScript : MonoBehaviour
     public GameObject dialogBox; // Box di dialogo
 
     private Queue<string> lineeDialogo;
-    private bool isTyping;
+    public static bool isTyping;
 
     // Riferimento al componente di movimento del giocatore
     private PlayerMovementTutorial playerMovement;
