@@ -12009,7 +12009,7 @@ MonoBehaviour:
   - Mhh, interessante. Sembra proprio un'addizione in colonna, mi ricorda quando
     ero ancora un giovane apprendista. Scova il segreto delle 3 forme e riporta le
     ossa nell'ufficio.
-  oggettoAttivato: {fileID: 616068516}
+  oggettoAttivato: {fileID: 779413961}
 --- !u!1 &623805929
 GameObject:
   m_ObjectHideFlags: 0
@@ -33025,8 +33025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineeDialogo:
-  - ' Benvenuto, Giovane cercatore di conoscenza. Hai scelto di venire da me per
-    diventare mio apprendista, un passo coraggioso verso il tuo destino.'
+  - Benvenuto, Giovane cercatore di conoscenza. Hai scelto di venire da me per diventare
+    mio apprendista, un passo coraggioso verso il tuo destino.
   - 'In questa dimensione di meraviglie e misteri, devi dimostrare il tuo valore.
     Una prova ti attende: raccogliere le ossa sparse di uno scheletro antico. Ogni
     osso custodisce un potere unico e una saggezza millenaria.'
@@ -35174,7 +35174,7 @@ MonoBehaviour:
   - "Guarda qui che bel pavimento che abbiamo, ma sembra che non tutte le mattonelle
     siano vere, dovresti fare attenzione. Forse quello schema appeso al muro riuscir\xE0
     a guidarti."
-  oggettoAttivato: {fileID: 1541335228}
+  oggettoAttivato: {fileID: 1817866412}
 --- !u!1 &1542260950
 GameObject:
   m_ObjectHideFlags: 0
@@ -48199,7 +48199,7 @@ MonoBehaviour:
   lineeDialogo:
   - Come ultima prova, mio caro giovane, mi devi dimostrare di saperti orientare
     nel caso ti perdessi in uno dei numerosi viaggi che faremo. Buona fortuna!
-  oggettoAttivato: {fileID: 2129926360}
+  oggettoAttivato: {fileID: 908743695}
 --- !u!114 &2133934556
 MonoBehaviour:
   m_ObjectHideFlags: 0
