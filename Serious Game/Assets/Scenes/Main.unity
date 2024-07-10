@@ -33025,7 +33025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineeDialogo:
-  - Benvenuto, Giovane cercatore di conoscenza. Hai scelto di venire da me per diventare
+  - Benvenuto, Giovane cercatore di conoscenza. Hai scelto di venire qui per diventare
     mio apprendista, un passo coraggioso verso il tuo destino.
   - 'In questa dimensione di meraviglie e misteri, devi dimostrare il tuo valore.
     Una prova ti attende: raccogliere le ossa sparse di uno scheletro antico. Ogni
@@ -45028,7 +45028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineeDialogo:
-  - "Ah, il cranio! Il cappello osseo della nostra testolina! Il cranio \xE8 l'insieme
+  - "Ah, il cranio! Il cappello osseo della nostra testolina! Il cranio e' l'insieme
     delle ossa che formano la testa dello scheletro umano. \xC8 diviso in due parti:
     il neurocranio, la zona superiore, e lo splancnocranio, la parte posteriore."
   - Qui dentro abbiamo un'alleanza di ossa superstar! La mandibola, l'unica mobile,
