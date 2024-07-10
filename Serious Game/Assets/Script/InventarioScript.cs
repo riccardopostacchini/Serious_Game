@@ -17,46 +17,55 @@ public class InventarioScript : MonoBehaviour
     public bool hasPiedi = false;
     public bool hasKey = false;
 
-   
+    public AudioClip keySound;
+    public AudioClip skeletonSound;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void AddKey()
     {
         hasKey = true;
-        Debug.Log("Chiave raccolta");
+        audioSource.PlayOneShot(keySound);
     }
 
     public void RemoveKey()
     {
         hasKey = false;
-        Debug.Log("Chiave rimossa dall'inventario");
+        
     }
     public void AddSkull()
     {
         hasSkull = true;
-        Debug.Log("Teschio raccolto!");
+        audioSource.PlayOneShot(skeletonSound);
+        
     }
 
     public void RemoveSkull()
     {
         hasSkull = false;
-        Debug.Log("Teschio rimosso dall'inventario!");
+        
     }
 
     public void AddOmero()
     {
         hasOmero = true;
-        Debug.Log("Omeri raccolto!");
+        audioSource.PlayOneShot(skeletonSound);
+
     }
 
     public void RemoveOmero()
     {
         hasOmero = false;
-        Debug.Log("Omeri rimossi dall'inventario!");
+        
     }
 
     public void AddColonna()
     {
         hasColonna = true;
-       
+        audioSource.PlayOneShot(skeletonSound);
     }
 
     public void RemoveColonna()
@@ -68,19 +77,19 @@ public class InventarioScript : MonoBehaviour
     public void AddTorace()
     {
         hasTorace = true;
-        Debug.Log("Torace raccolto!");
+        audioSource.PlayOneShot(skeletonSound);
     }
 
     public void RemoveTorace()
     {
         hasTorace = false;
-        Debug.Log("torace rimosso dall'inventario!");
+        
     }
 
     public void AddAvambraccio()
     {
         hasAvambraccio = true;
-        
+        audioSource.PlayOneShot(skeletonSound);
     }
 
     public void RemoveAvambraccio()
@@ -92,7 +101,7 @@ public class InventarioScript : MonoBehaviour
     public void AddMani()
     {
         hasMani = true;
-
+        audioSource.PlayOneShot(skeletonSound);
     }
 
     public void RemoveMani()
@@ -104,7 +113,7 @@ public class InventarioScript : MonoBehaviour
     public void AddAnca()
     {
         hasAnca = true;
-
+        audioSource.PlayOneShot(skeletonSound);
     }
 
     public void RemoveAnca()
@@ -116,7 +125,7 @@ public class InventarioScript : MonoBehaviour
     public void AddFemore()
     {
         hasFemore = true;
-
+        audioSource.PlayOneShot(skeletonSound);
     }
 
     public void RemoveFemore()
@@ -128,7 +137,7 @@ public class InventarioScript : MonoBehaviour
     public void AddTibia()
     {
         hasTibia = true;
-
+        audioSource.PlayOneShot(skeletonSound);
     }
 
     public void RemoveTibia()
@@ -140,7 +149,7 @@ public class InventarioScript : MonoBehaviour
     public void AddPiedi()
     {
         hasPiedi = true;
-
+        audioSource.PlayOneShot(skeletonSound);
     }
 
     public void RemovePiedi()
