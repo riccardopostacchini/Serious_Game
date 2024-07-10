@@ -36,6 +36,7 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     Rigidbody rb;
 
+    private bool ableToMove = true;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,17 +49,19 @@ public class PlayerMovementTutorial : MonoBehaviour
 
     private void Update()
     {
-        // ground check
-        grounded = Physics.Raycast(orientation.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
-        Debug.DrawRay(orientation.position, Vector3.down, Color.red);
-        MyInput();
-        SpeedControl();
+        if (ableToMove)
+        {
+            grounded = Physics.Raycast(orientation.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+            Debug.DrawRay(orientation.position, Vector3.down, Color.red);
+            MyInput();
+            SpeedControl();
 
-        // handle drag
-        if (grounded)
-            rb.drag = groundDrag;
-        else
-            rb.drag = 0;
+            // handle drag
+            if (grounded)
+                rb.drag = groundDrag;
+            else
+                rb.drag = 0;
+        }
     }
 
     private void FixedUpdate()
@@ -148,5 +151,10 @@ public class PlayerMovementTutorial : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    public void EnableMove(bool enable)
+    {
+        ableToMove = enable;
     }
 }

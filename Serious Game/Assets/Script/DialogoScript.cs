@@ -12,6 +12,9 @@ public class DialogoScript : MonoBehaviour
     private Queue<string> lineeDialogo;
     private bool isTyping;
 
+    // Riferimento al componente di movimento del giocatore
+    private PlayerMovementTutorial playerMovement;
+
     private void Start()
     {
         if (componenteTesto != null)
@@ -23,6 +26,9 @@ public class DialogoScript : MonoBehaviour
             dialogBox.SetActive(false); // Nasconde la box di dialogo all'inizio
         }
         lineeDialogo = new Queue<string>();
+
+        // Trova il componente di movimento del giocatore nella scena
+        playerMovement = FindObjectOfType<PlayerMovementTutorial>();
     }
 
     public void MostraDialogo(string[] linee)
@@ -34,6 +40,13 @@ public class DialogoScript : MonoBehaviour
         {
             lineeDialogo.Enqueue(linea);
         }
+
+        // Disabilita il movimento del giocatore
+        if (playerMovement != null)
+        {
+            playerMovement.EnableMove(false);
+        }
+
         StartCoroutine(MostraProssimaLinea());
     }
 
@@ -52,6 +65,12 @@ public class DialogoScript : MonoBehaviour
         componenteTesto.text = string.Empty; // Pulisci il testo alla fine
         dialogBox.SetActive(false); // Nasconde la box di dialogo alla fine
         isTyping = false;
+
+        // Riabilita il movimento del giocatore alla fine del dialogo
+        if (playerMovement != null)
+        {
+            playerMovement.EnableMove(true);
+        }
     }
 
     private IEnumerator DigitaLinea(string linea)

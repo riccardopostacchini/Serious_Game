@@ -37910,7 +37910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   componenteTesto: {fileID: 932576728}
-  velocitaTesto: 0.1
+  velocitaTesto: 0.05
   dialogBox: {fileID: 742266076}
 --- !u!4 &1722637183
 Transform:
