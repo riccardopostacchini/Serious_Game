@@ -8,12 +8,14 @@ public class DialogoScript : MonoBehaviour
     public TextMeshProUGUI componenteTesto;
     public float velocitaTesto;
     public GameObject dialogBox; // Box di dialogo
+    public GameObject Giocatore;
 
     private Queue<string> lineeDialogo;
     public static bool isTyping;
 
     // Riferimento al componente di movimento del giocatore
     private PlayerMovementTutorial playerMovement;
+    private float velocitaOriginale;
 
     private void Start()
     {
@@ -29,6 +31,11 @@ public class DialogoScript : MonoBehaviour
 
         // Trova il componente di movimento del giocatore nella scena
         playerMovement = FindObjectOfType<PlayerMovementTutorial>();
+        if (playerMovement != null)
+        {
+            velocitaOriginale = playerMovement.moveSpeed; // Memorizza la velocità originale del giocatore
+        }
+
     }
 
     public void MostraDialogo(string[] linee)
@@ -45,6 +52,7 @@ public class DialogoScript : MonoBehaviour
         if (playerMovement != null)
         {
             playerMovement.EnableMove(false);
+            playerMovement.moveSpeed = 0;
         }
 
         StartCoroutine(MostraProssimaLinea());
@@ -70,6 +78,7 @@ public class DialogoScript : MonoBehaviour
         if (playerMovement != null)
         {
             playerMovement.EnableMove(true);
+            playerMovement.moveSpeed = velocitaOriginale;
         }
     }
 
