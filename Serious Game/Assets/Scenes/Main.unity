@@ -2696,6 +2696,66 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4912697163364051714, guid: f3ecb3c20c990480890dbdd2163f1bf9, type: 3}
+--- !u!1 &181890415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181890416}
+  - component: {fileID: 181890417}
+  m_Layer: 0
+  m_Name: triggerTibia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &181890416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181890415}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181890417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181890415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - Ah, la tibia e il perone! Il duo dinamico dello scheletro della gamba!
+  - "La tibia \xE8 l'osso principale che, insieme al perone, forma il telaio robusto
+    delle nostre gambe. \xC8 come il pilastro centrale che supporta il peso della
+    parte superiore del corpo e, allo stesso tempo, ci permette di muoverci agilmente.
+    \xC8 come un grande capo di famiglia, forte e affidabile!"
+  - "E poi c'\xE8 il perone, il partner pi\xF9 snello della tibia. \xC8 l'equilibrista
+    della nostra gamba, leggero ma potente, essenziale per la nostra agilit\xE0 e
+    equilibrio durante la locomozione. Non \xE8 da sottovalutare, anche se \xE8 pi\xF9
+    sottile, \xE8 una star nella sua categoria!"
+  - "Insieme, tibia e perone formano le articolazioni chiave del ginocchio e della
+    caviglia, il centro nevralgico delle nostre mosse pi\xF9 audaci! Sono come due
+    amici inseparabili che lavorano in squadra per portarci avanti nelle avventure
+    della vita."
+  - Hai quasi raggiunto il traguardo, baldo giovane, il nono portale ti sta aspettando!
+  oggettoAttivato: {fileID: 941483328}
 --- !u!1 &182423458
 GameObject:
   m_ObjectHideFlags: 0
@@ -3983,7 +4043,47 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1996348465}
+  - {fileID: 332721690}
+  - {fileID: 1680988843}
+  - {fileID: 1486616735}
+  - {fileID: 1946940230}
+  - {fileID: 1158042272}
+  - {fileID: 1332637449}
+  - {fileID: 892547572}
+  - {fileID: 181890416}
+  - {fileID: 869738173}
   m_Father: {fileID: 543450652758999681}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &232718130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232718131}
+  m_Layer: 0
+  m_Name: DialogoUfficio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &232718131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232718130}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1454197522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &234748274
 GameObject:
@@ -5937,6 +6037,63 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -9167865006898377062, guid: 1665eba73c76245a2bd2076c8e04d752, type: 3}
   m_PrefabInstance: {fileID: 772126000}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &332721689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 332721690}
+  - component: {fileID: 332721691}
+  m_Layer: 0
+  m_Name: triggerOmero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &332721690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332721689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &332721691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332721689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - Ah, guarda qui cosa abbiamo! L'omero, il grande attore delle articolazioni! Questo
+    osso fa parte del gruppo esclusivo delle ossa lunghe, posizionato tra la scapola,
+    il radio e l'ulna.
+  - "L'omero non \xE8 solo una cannuccia gigante per i liquidi ossei, no no! \xC8
+    fondamentale per le sue funzioni nelle articolazioni della spalla e del gomito.
+    Immagina, \xE8 come il direttore d'orchestra delle nostre danze articolari!"
+  - "E non \xE8 tutto! Questo gigante osseo \xE8 anche la casa per i muscoli che
+    rendono possibili tutti quei movimenti eleganti e acrobatici delle nostre articolazioni.
+    \xC8 come un palcoscenico dove si esibiscono i migliori atleti muscolari del
+    corpo!"
+  - Ora va! E attraversa il secondo portale.
+  oggettoAttivato: {fileID: 2069094718}
 --- !u!1 &340611946
 GameObject:
   m_ObjectHideFlags: 0
@@ -17505,6 +17662,68 @@ Transform:
   - {fileID: 1225282337}
   m_Father: {fileID: 543450651825895654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &869738172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869738173}
+  - component: {fileID: 869738174}
+  m_Layer: 0
+  m_Name: triggerPiedi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &869738173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869738174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869738172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - "Ah, le ossa del piede! La base solida che ci permette di stare in piedi e ballare
+    sulla terra! Questi 26 pezzi sono come i mattoni della nostra stabilit\xE0 e
+    agilit\xE0!"
+  - Prima di tutto, ci sono le ossa del tarso, il gruppo che fa da fondazione, posizionate
+    vicino al tallone e che ci tengono radicati al suolo. Poi ci sono le ossa metatarsali,
+    la banda mediana che collega e sostiene il nostro movimento. E infine, le falangi,
+    i soldati che completano il nostro piede, pronti a muoversi con leggerezza e
+    precisione!
+  - "Queste ossa non sono solo l\xEC a fare da supporto, no no! Sono anche essenziali
+    per la nostra mobilit\xE0, formando articolazioni vitali come il tallone d'Achille.
+    Ogni movimento, ogni passo, \xE8 come una sinfonia che suona attraverso queste
+    ossa meravigliose!"
+  - Ce l'hai fatta ragazzo! Hai completato la mia prova e ti sei guadagnato il titolo
+    di apprendista. Dirigiti al portale davanti al grande albero per tornare nel
+    mondo reale, e mi raccomando, fai tesoro delle conoscenze che ti sono state impartite
+    oggi!
+  oggettoAttivato: {fileID: 228208890}
 --- !u!1 &872923278
 GameObject:
   m_ObjectHideFlags: 0
@@ -18014,6 +18233,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c0af0c90039e9406d8eed8b9acf0cfe6, type: 3}
   m_PrefabInstance: {fileID: 890760790}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &892547571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892547572}
+  - component: {fileID: 892547573}
+  m_Layer: 0
+  m_Name: triggerFemore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &892547572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892547571}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892547573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892547571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - "Ah, il femore! Il grande, il potente, il gigante dello scheletro degli arti
+    inferiori! Questo osso non \xE8 solo una colonna di supporto, \xE8 la superstar
+    che rende possibile la danza della nostra vita!"
+  - "Il femore \xE8 il pi\xF9 lungo e robusto osso del corpo umano, come una colonna
+    d'onore che sostiene il nostro peso e ci permette di sfrecciare verso avventure
+    epiche! \xC8 come il pilastro principale di un castello, forte e risoluto."
+  - "Ma non \xE8 solo forza bruta! Il femore \xE8 anche il regista delle due principali
+    articolazioni dell'anca e del ginocchio. Si tratta di un multitasking scheletrico,
+    capace di farci muovere con eleganza e precisione."
+  - Quindi, mio caro giovane, esci dall'uffico e procedi verso l'ottavo portale!
+  oggettoAttivato: {fileID: 1426387933}
 --- !u!1 &893491589
 GameObject:
   m_ObjectHideFlags: 0
@@ -25854,6 +26129,63 @@ Transform:
   - {fileID: 518267898}
   m_Father: {fileID: 1593317508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1158042271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158042272}
+  - component: {fileID: 1158042273}
+  m_Layer: 0
+  m_Name: triggerMani
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1158042272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158042271}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1158042273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158042271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - Ah, le ossa della mano! I piccoli tesori che fanno la magia della nostra presa
+    e del nostro tocco! Questi 27 pezzi sono come il mazzo di carte che il destino
+    ha in serbo per noi!
+  - "Prima di tutto, abbiamo le ossa del carpo, il nucleo della festa, quelle pi\xF9
+    vicine al polso che danno il tono a tutto il resto. Poi vengono le ossa metacarpali,
+    il gruppo intermedio che collega il gioco. E infine, le ossa delle dita, i soldati
+    che portano la battaglia fino alla fine del polso!"
+  - "Queste ossa non sono solo l\xEC a fare la guardia, no! Sono fondamentali per
+    un sacco di cose fantastiche, come la presa salda quando afferrate qualcosa di
+    prezioso o il supporto nel primo passo zoppicante di un bambino!"
+  - Ora ragazzo fai buon uso di quelle mani e procedi verso il sesto portale!
+  oggettoAttivato: {fileID: 187227399}
 --- !u!1001 &1161232047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26115,6 +26447,38 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1172282589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1172282590}
+  m_Layer: 0
+  m_Name: TriggerStanze
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1172282590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172282589}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.314499, y: -1.2210187, z: -17.259298}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1466762945}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1177654585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29157,6 +29521,64 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3c3c6aa682a74e758d5d6828e46fda9, type: 3}
+--- !u!1 &1332637448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332637449}
+  - component: {fileID: 1332637450}
+  m_Layer: 0
+  m_Name: triggerAnca
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1332637449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332637448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1332637450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332637448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - Ah, le ossa del bacino! La cintura pelvica che tiene su tutto il nostro castello
+    corporeo! Questi quattro pezzi sono i pilastri che reggono il peso della parte
+    superiore del corpo e lo collegano agli arti inferiori. Un lavoro da veri eroi!
+  - In primo piano abbiamo l'osso sacro, il grande protettore al centro della scena.
+    Poi ci sono le due ossa iliache, le gemelle che abbracciano il nostro segreto
+    di deambulazione con forza e grazia. E infine, il modesto coccige, che completa
+    il quartetto con un tocco di stile.
+  - "Queste ossa non sono solo l\xEC a fare da spalla al nostro peso, no no! Sono
+    i pilastri della nostra danza quotidiana, essenziali per il nostro modo di camminare
+    come veri campioni della biomeccanica!"
+  - "Ora giovane procedi verso il settimo portale e ricorda di onorare sempre le
+    tue ossa del bacino, perch\xE9 senza di loro, la nostra vita sarebbe un po' traballante!"
+  oggettoAttivato: {fileID: 6979164617146420568}
 --- !u!1001 &1336714140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31951,6 +32373,7 @@ Transform:
   - {fileID: 766750202}
   - {fileID: 203637586}
   - {fileID: 381932315}
+  - {fileID: 232718131}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1454326779 stripped
@@ -32056,6 +32479,63 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.021751693, y: 0.022487042, z: 0.012836315}
   m_Center: {x: -0.00534738, y: -0.0051112366, z: -0.000870501}
+--- !u!1 &1466762944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466762945}
+  - component: {fileID: 1466762946}
+  m_Layer: 0
+  m_Name: triggerStanzaIniziale
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466762945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466762944}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.251, y: 1.595, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1172282590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466762946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466762944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - ' Benvenuto, Giovane cercatore di conoscenza. Hai scelto di venire da me per
+    diventare mio apprendista, un passo coraggioso verso il tuo destino.'
+  - 'In questa dimensione di meraviglie e misteri, devi dimostrare il tuo valore.
+    Una prova ti attende: raccogliere le ossa sparse di uno scheletro antico. Ogni
+    osso custodisce un potere unico e una saggezza millenaria.'
+  - Completando questo scheletro, non solo dimostrerai il tuo valore, ma acquisirai
+    il diritto di camminare al mio fianco come apprendista, pronto a scoprire i segreti
+    che il mondo ha da offrire.
+  - Prepara il tuo cuore e la tua mente, giovane aspirante. Affronta questa prova
+    con saggezza e determinazione. Che ogni osso che raccoglierai sia un passo avanti
+    verso il tuo destino!
+  oggettoAttivato: {fileID: 232718130}
 --- !u!1001 &1468438321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32632,6 +33112,63 @@ Transform:
   - {fileID: 545468257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1486616734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486616735}
+  - component: {fileID: 1486616736}
+  m_Layer: 0
+  m_Name: triggerTorace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486616735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486616734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486616736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486616734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - "Ah, la gabbia toracica! Il tesoro nascosto tra il collo e il muscolo diaframma!
+    Questa struttura non \xE8 solo un insieme di ossa, \xE8 la vera rockstar della
+    protezione e del supporto!"
+  - "Immagina una squadra di 12 paia di costole, lo sterno e le 12 vertebre toraciche
+    della colonna vertebrale. \xC8 come un grande concerto sinfonico, dove ogni elemento
+    suona il suo ruolo per proteggere gli organi vitali e sostenere il nostro corpo
+    nel migliore dei modi."
+  - "E non \xE8 tutto! La gabbia toracica \xE8 anche il palcoscenico per un grande
+    spettacolo respiratorio. Durante il processo respiratorio, si apre e si espande
+    come un coro di voci che si sollevano in un inno di ossigeno! Ora, procedi verso
+    il quarto portale."
+  oggettoAttivato: {fileID: 3936267831666787342}
 --- !u!64 &1486929235
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36957,6 +37494,64 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -153830957423991239, guid: 0e85b5f71e76f486f852f1849272677d, type: 3}
+--- !u!1 &1680988842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680988843}
+  - component: {fileID: 1680988844}
+  m_Layer: 0
+  m_Name: triggerColonna
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680988843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680988842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680988844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680988842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - "Ah, la colonna vertebrale! Lo scheletro del rachide, la colonna sonora dei nostri
+    movimenti! Questo capolavoro osseo non \xE8 solo una schiena dritta, no no! Ha
+    una missione importante: sostenere il tronco e la testa e proteggere il nostro
+    prezioso midollo spinale."
+  - "Immagina la colonna come un palazzo di 33-34 vertebre, diviso in cinque quartieri
+    di lusso: il tratto cervicale, il tratto dorsale, il tratto lombare, il tratto
+    sacrale e il modesto coccigeo. Ogni sezione ha il suo stile, la sua personalit\xE0!"
+  - "E sai una cosa? La colonna non \xE8 un bastone diritto, no! Ha curve eleganti
+    sul piano sagittale, come un'opera d'arte fatta di curve e contrappunti."
+  - Quando sei pronto va ed attraversa il terzo portale. E ricorda sempre di mantenere
+    la schiena dritta... o forse un po' curva, per essere in sintonia con la nostra
+    fantastica colonna vertebrale!
+  oggettoAttivato: {fileID: 3318702446842662572}
 --- !u!4 &1681048926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4166505909902172, guid: 08fd1b80cc24cc8439f45fda3c558255, type: 3}
@@ -41964,6 +42559,7 @@ MonoBehaviour:
   orientation: {fileID: 1153532564}
   camminata: {fileID: 8300000, guid: 616c699ebbae0d849b3285a8b947669d, type: 3}
   salto: {fileID: 8300000, guid: c1bb77aac2daaa648bb679d11a24dbae, type: 3}
+  dialogueTrigger: {fileID: 232718130}
 --- !u!114 &1895207057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42761,6 +43357,62 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8694516002014653529, guid: 04e411d681d734d59b213937ce4811cc, type: 3}
+--- !u!1 &1946940229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1946940230}
+  - component: {fileID: 1946940231}
+  m_Layer: 0
+  m_Name: triggerAvambraccio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1946940230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946940229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229585254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946940231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946940229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349b3f10a86abc4c8a44327f409ea4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineeDialogo:
+  - ' Ah, il radio e l''ulna! I gemelli dinamici dello scheletro dell''avambraccio!
+    Questi due non sono solo ossa, sono il motore che fa andare avanti il tuo braccio!'
+  - "Il radio \xE8 un osso lungo che fa squadra con l'ulna per formare la struttura
+    base dell'avambraccio. E non \xE8 solo un copione da seguire, no no! Il radio
+    \xE8 la star di due importanti articolazioni: il gomito e l'articolazione del
+    polso. \xC8 come il maestro d'orchestra che dirige il concerto del movimento
+    del tuo braccio!"
+  - "E poi ci sono i muscoli! Il radio \xE8 la casa degli eroi muscolari dell'avambraccio
+    e della mano. Li accoglie e li sostiene come un palco per le star del tuo braccio!\nSei
+    a met\xE0 strada ragazzo, continua cosi verso il quinto portale!"
+  oggettoAttivato: {fileID: 435837482}
 --- !u!4 &1947340871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b59812deb2c04f19a3aaf6510d00fcd, type: 3}
@@ -43687,7 +44339,7 @@ MonoBehaviour:
     Ogni osso con il suo ruolo speciale!
   - Il cranio protegge l'encefalo e alcuni organi di senso, e costituisce le strutture
     della faccia. Ora, una volta uscito dal mio ufficio, troverai il primo portale
-    da attraversare alla tua destra. Che la fortuna ti assista
+    da attraversare alla tua destra. Che la fortuna ti assista!
   oggettoAttivato: {fileID: 1744922893637481270}
 --- !u!1 &2000860952 stripped
 GameObject:
@@ -62220,3 +62872,4 @@ SceneRoots:
   - {fileID: 543450652745163685}
   - {fileID: 1844835672}
   - {fileID: 1722637183}
+  - {fileID: 1172282590}

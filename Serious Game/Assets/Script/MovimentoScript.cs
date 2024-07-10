@@ -37,8 +37,11 @@ public class PlayerMovementTutorial : MonoBehaviour
     Rigidbody rb;
 
     private bool ableToMove = true;
+
+    public GameObject dialogueTrigger;
     private void Start()
     {
+        dialogueTrigger.SetActive(true);
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
