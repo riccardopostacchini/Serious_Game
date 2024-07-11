@@ -7056,8 +7056,7 @@ MonoBehaviour:
     osso fa parte del gruppo esclusivo delle ossa lunghe, posizionato tra la scapola,
     il radio e l'ulna.
   - "L'omero non \xE8 solo una cannuccia gigante per i liquidi ossei, no no! \xC8
-    fondamentale per le sue funzioni nelle articolazioni della spalla e del gomito.
-    Immagina, \xE8 come il direttore d'orchestra delle nostre danze articolari!"
+    fondamentale per le sue funzioni nelle articolazioni della spalla e del gomito."
   - "E non \xE8 tutto! Questo gigante osseo \xE8 anche la casa per i muscoli che
     rendono possibili tutti quei movimenti eleganti e acrobatici delle nostre articolazioni.
     \xC8 come un palcoscenico dove si esibiscono i migliori atleti muscolari del
@@ -21079,8 +21078,8 @@ MonoBehaviour:
     inferiori! Questo osso non \xE8 solo una colonna di supporto, \xE8 la superstar
     che rende possibile la danza della nostra vita!"
   - "Il femore \xE8 il pi\xF9 lungo e robusto osso del corpo umano, come una colonna
-    d'onore che sostiene il nostro peso e ci permette di sfrecciare verso avventure
-    epiche! \xC8 come il pilastro principale di un castello, forte e risoluto."
+    che sostiene il nostro peso e ci permette di sfrecciare verso avventure epiche!
+    \xC8 come il pilastro principale di un castello, forte e risoluto."
   - "Ma non \xE8 solo forza bruta! Il femore \xE8 anche il regista delle due principali
     articolazioni dell'anca e del ginocchio. Si tratta di un multitasking scheletrico,
     capace di farci muovere con eleganza e precisione."
@@ -22160,8 +22159,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f384d3a22144ce49b4dda5b3c22538f, type: 2}
-  m_sharedMaterial: {fileID: 228238976980186754, guid: 8f384d3a22144ce49b4dda5b3c22538f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b410f6eabd61ba64c83e80853343eccc, type: 2}
+  m_sharedMaterial: {fileID: -2350995887645484457, guid: b410f6eabd61ba64c83e80853343eccc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22185,8 +22184,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -42059,7 +42058,7 @@ MonoBehaviour:
     movimenti! Questo capolavoro osseo non \xE8 solo una schiena dritta, no no! Ha
     una missione importante: sostenere il tronco e la testa e proteggere il nostro
     prezioso midollo spinale."
-  - "Immagina la colonna come un palazzo di 33-34 vertebre, diviso in cinque quartieri
+  - "Immagina la colonna come un palazzo di 33-34 vertebre, diviso in cinque sezioni
     di lusso: il tratto cervicale, il tratto dorsale, il tratto lombare, il tratto
     sacrale e il modesto coccigeo. Ogni sezione ha il suo stile, la sua personalit\xE0!"
   - "E sai una cosa? La colonna non \xE8 un bastone diritto, no! Ha curve eleganti
@@ -49252,7 +49251,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.487
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -49921,7 +49920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineeDialogo:
-  - "Ah, il cranio! Il cappello osseo della nostra testolina! Il cranio e' l'insieme
+  - "Ah, il cranio! Il cappello osseo della nostra testolina! Il cranio \xE8 l'insieme
     delle ossa che formano la testa dello scheletro umano. \xC8 diviso in due parti:
     il neurocranio, la zona superiore, e lo splancnocranio, la parte posteriore."
   - Qui dentro abbiamo un'alleanza di ossa superstar! La mandibola, l'unica mobile,
