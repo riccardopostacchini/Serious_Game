@@ -10,11 +10,19 @@ public class PuzzleTpScript : MonoBehaviour
     public GameObject TriggerDialogo;
     public GameObject TeletrasportoDisattivato;
 
+    private AudioSource audioSource;
+    public AudioClip suonoTeletrasporto;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         // Controlla se il collider appartiene al layer "Giocatore"
         if (other.gameObject.layer == LayerMask.NameToLayer("Giocatore"))
         {
+            audioSource.PlayOneShot(suonoTeletrasporto);
             TriggerDialogo.SetActive(true);
             // Teletrasporta il giocatore alla nuova posizione
             Giocatore.transform.position = Destinazione.position;

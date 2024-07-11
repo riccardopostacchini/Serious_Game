@@ -9,11 +9,19 @@ public class MainTpScript : MonoBehaviour
     public Transform Destinazione;
     public GameObject Giocatore;
 
+    private AudioSource audioSource;
+    public AudioClip suonoTeletrasporto;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         // Controlla se il collider appartiene al layer "Giocatore"
         if (other.gameObject.layer == LayerMask.NameToLayer("Giocatore"))
         {
+            audioSource.PlayOneShot(suonoTeletrasporto);
             // Teletrasporta il giocatore alla nuova posizione
             Giocatore.transform.position = Destinazione.position;
             Debug.Log("Giocatore teletrasportato alla nuova posizione.");
