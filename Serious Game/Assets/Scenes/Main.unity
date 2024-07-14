@@ -52036,7 +52036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPausa: {fileID: 1947942109}
-  boxDialogo: {fileID: 742266076}
+  boxDialogo: {fileID: 1066534970}
 --- !u!4 &1887436661
 Transform:
   m_ObjectHideFlags: 0
